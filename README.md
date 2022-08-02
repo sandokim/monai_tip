@@ -78,3 +78,9 @@ print(np.unique(label.get_array()[0,8,:,:,:]))
 
 label이 안나올때 Unet 마지막 단에 nn.Sigmoid()가 아니라 nn.Softmax(dim=1)을 써보자. Sigmoid를 썼을 경우, Background의 prob이 다른 레이블들보다 높게 되면, output의 segmentation이 모두 Background가 되버려 label missing현상이 생길 수 있다.
 
+--> Unet 마지막 softmax layer 또는 sigmoid layer 제거하고
+```python
+output = model(input)
+softmax = nn.Softmax(dim=1)
+output = softmax(output)
+```
