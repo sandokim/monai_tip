@@ -87,4 +87,4 @@ output = softmax(output)
 
 Dice 수치가 올라가지 않거나 Loss가 떨어지지 않는다면 softmax나 sigmoid가 연속적으로 적용된 것이 아닌지 확인해보자
 
-보통 모델 output은 feature map의 Raw 상태 사용하고, DiceLoss를 계산하는 부분에서 Loss내에서 softmax나 sigmoid를 취한다.
+보통 모델 output은 feature map의 Raw 상태 사용하고, Loss를 계산하는 부분에서 Loss내에서 softmax나 sigmoid를 취한다.
