@@ -5,6 +5,8 @@ MetaTensor에 포함된 tensor는 tensor.get_array()로 구한다.
 
 output quality check
 ```python
+import matplotlib.pyplot as plt
+fig = plt.figure(figsize=(12,8))
 plt.subplot(3,3,1)
 plt.imshow(seg.get_array()[0,0,:,:,100])
 plt.subplot(3,3,2)
