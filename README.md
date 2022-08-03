@@ -135,6 +135,10 @@ Dice 수치가 올라가지 않거나 Loss가 떨어지지 않는다면 softmax�
 
 이 때 원하는 객체 자체를 바이너리로 저장해놓는 것이고 필요할 때 불러오기만 하면 되기 때문에 속도가 빠르다는 장점이 있다.
 
+* pickle.dump(객체, 파일)로 저장
+
+* pickle.load(파일)로 로딩
+
 ```python
 import pickle
 my_list = ['a','b','c'] 
