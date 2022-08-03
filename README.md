@@ -18,6 +18,13 @@ def conv3x3(in_planes, out_planes, stride=1):
 nn.Sequential(nn.AvgPool2d(2,2), conv3x3(planes, planes))
 ```
 
+#### FID score
+"""Calculates the Frechet Inception Distance (FID) to evalulate GANs
+
+The FID metric calculates the distance between two distributions of images.
+Typically, we have summary statistics (mean & covariance matrix) of one
+of these distributions, while the 2nd distribution is given by a GAN."""
+
 
 # Monai 사용법
 
