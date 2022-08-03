@@ -137,14 +137,16 @@ Dice 수치가 올라가지 않거나 Loss가 떨어지지 않는다면 softmax�
 
 ```python
 import pickle
+my_list = ['a','b','c'] 
 
-my_list = ['a','b','c'] ## Save pickle
-
+## Save pickle
 with open("data.pickle","wb") as fw:    
-    pickle.dump(my_list, fw) ## Load pickle
+    pickle.dump(my_list, fw) 
     
+## Load pickle
 with open("data.pickle","rb") as fr:
     data = pickle.load(fr)
-    
-print(data) #['a', 'b', 'c']
+   
+print(data) 
+#['a', 'b', 'c']
 ```
