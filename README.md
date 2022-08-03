@@ -35,6 +35,7 @@ samples respectivly."""
 
 <img src="https://github.com/sandokim/monai_tip/blob/main/images/inceptionscore.png" width="60%">
 
+<img src="https://github.com/sandokim/monai_tip/blob/main/images/inceptionargs.png" width="60%">
 
 # Monai 사용법
 
