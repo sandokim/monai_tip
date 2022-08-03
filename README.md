@@ -1,4 +1,26 @@
+# conv 계산
+
+2D convolution using a kernel size of 3, stride of 1 and padding,
+
+```python
+#### conv
+nn.Conv2d(in_feature, out_feature, kernel_size=3, stride=1, padding=1) --> output size = input size
+
+#### upsample
+nn.ConvTranspose2d(in_feature, out_feature, kernel_size=4, stride=2, padding=1) -->  output size = 2*(input size)
+
+def conv3x3(in_planes, out_planes, stride=1):
+    "3x3 convolution with padding"
+    return nn.Conv2d(in_planes, out_planes, kernel_size=3, stride=stride,
+                     padding=1, bias=False)
+
+#### downsample
+nn.Sequential(nn.AvgPool2d(2,2), conv3x3(planes, planes))
+```
+
+
 # Monai 사용법
+
 ```python
 MetaTensor에 포함된 tensor는 tensor.get_array()로 구한다.
 ```
