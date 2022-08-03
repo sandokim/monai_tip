@@ -1,3 +1,9 @@
+dcm 파일 불러오면 안에 여러 정보들이 있습니다.
+
+* pixelspacing 이 x,y 해상도
+* slicethickness 가 z방향 해상
+* (mm 단위)
+
 # conv 계산
 
 2D convolution using a kernel size of 3, stride of 1 and padding,
