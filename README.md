@@ -4,6 +4,19 @@ dcm 파일 불러오면 안에 여러 정보들이 있습니다.
 * slicethickness 가 z방향 해상
 * (mm 단위)
 
+* slicethinckness --> 기기에 저장된 값 / 실제 해상도랑 다를 수 있음
+* ImagePositionPatient --> x,y,z 좌표
+* dcm1.ImagePosition - dcm2.ImagePosition = (x,y,z1) - (x,y,z2) = (0,0, z1-z2) / 실제 절대 해상도
+* 
+#### 하나의 폴더내에서 연속된 dcm 2개를 빼와서 차이를 구하고, resize를 한다.
+* 0.9 x 300 --> abs(dcm1.ImagePosition - dcm2.ImagePosition) x slice수 = 실제크기
+* (0.9 x 300)/1mm --> 실제크기/목표해상도 = 해상도가 변경된 slice수 = 270
+* z방향 resize --> imresize3(data, [x,y,270])
+
+<img src="https://github.com/sandokim/monai_tip/blob/main/images/dicomImagePositionPatient.jpg" width="60%">
+
+3d resize python tool
+
 # conv 계산
 
 2D convolution using a kernel size of 3, stride of 1 and padding,
