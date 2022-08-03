@@ -33,6 +33,8 @@ The FID is calculated by assuming that X_1 and X_2 are the activations of
 the pool_3 layer of the inception net for generated samples and real world
 samples respectivly."""
 
+<img src="https://github.com/sandokim/monai_tip/blob/main/images/inceptionscore.png" width="60%">
+
 
 # Monai 사용법
 
