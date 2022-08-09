@@ -28,6 +28,8 @@ dcm 파일 불러오면 안에 여러 정보들이 있습니다.
 #### conv
 nn.Conv2d(in_feature, out_feature, kernel_size=3, stride=1, padding=1) --> output size = input size
 
+nn.Conv2d(in_feature, out_feature, kernel_size=3, stride=2, padding=1) --> output size = (1/2)*input size
+
 #### upsample
 nn.ConvTranspose2d(in_feature, out_feature, kernel_size=4, stride=2, padding=1) -->  output size = 2*(input size)
 
