@@ -22,6 +22,43 @@ dcm 파일 불러오면 안에 여러 정보들이 있습니다.
 
 # [conv 계산](https://ezyang.github.io/convolution-visualizer/index.html)
 
+```python
+#%% 2d conv calculation
+import torch
+from torch import nn
+
+# We define a helper function to calculate convolutions. It initializes
+# the convolutional layer weights and performs corresponding dimensionality
+# elevations and reductions on the input and output.
+def comp_conv2d(conv2d, X):
+    # (1, 1) indicates that batch size and the number of channels are both 1
+    X = X.reshape((1, 1) + X.shape)
+    Y = conv2d(X)
+    # Strip the first two dimensions: examples and channels
+    return Y.reshape(Y.shape[2:])
+# 1 row and column is padded on either side, so a total of 2 rows or columns are added
+conv2d = nn.Conv2d(in_channels=1, out_channels=1, kernel_size=3, padding=1, stride=1)
+X = torch.rand(size=(8, 8))
+comp_conv2d(conv2d, X).shape
+
+#%% 3d conv calculation
+import torch
+from torch import nn
+
+# We define a helper function to calculate convolutions. It initializes
+# the convolutional layer weights and performs corresponding dimensionality
+# elevations and reductions on the input and output.
+def comp_conv3d(conv3d, X):
+    # (1, 1) indicates that batch size and the number of channels are both 1
+    X = X.reshape((1, 1) + X.shape)
+    Y = conv3d(X)
+    # Strip the first two dimensions: batch size and channels
+    return Y.reshape(Y.shape[2:])
+conv3d = nn.Conv3d(in_channels=1,out_channels=1, kernel_size=3, padding=1, stride=1)
+X = torch.rand(size=(8, 8, 8))
+comp_conv3d(conv3d, X).shape
+```
+
 2D convolution using a kernel size of 3, stride of 1 and padding,
 
 ```python
