@@ -20,7 +20,7 @@ dcm 파일 불러오면 안에 여러 정보들이 있습니다.
 
 3d resize python tool
 
-# conv 계산
+# [conv 계산](https://ezyang.github.io/convolution-visualizer/index.html)
 
 2D convolution using a kernel size of 3, stride of 1 and padding,
 
