@@ -1,4 +1,4 @@
-# argmax 이전 값을 logits이라 한다.
+##### argmax 이전 값을 logits이라 한다. 
 
 ### [Interpolate numpy for spacing Dicom](https://stackoverflow.com/questions/48121916/numpy-resize-rescale-image)
 
