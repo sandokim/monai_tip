@@ -1,5 +1,6 @@
-### [Interpolate numpy for spacing Dicom](https://stackoverflow.com/questions/48121916/numpy-resize-rescale-image)
+# argmax 이전 값을 logits이라 한다.
 
+### [Interpolate numpy for spacing Dicom](https://stackoverflow.com/questions/48121916/numpy-resize-rescale-image)
 
 dcm 파일 불러오면 안에 여러 정보들이 있습니다.
 
